@@ -80,7 +80,7 @@
                             <a data-toggle="tooltip" data-placement="top" title="Lock">
                                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                             </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="/">
                                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                             </a>
                         </div>
@@ -165,7 +165,7 @@
 
                                                                 <td> 
                                                                     <button class="btn btn-secondary open-update" 
-                                                                            href="#update" data-toggle="modal" data-placement="top" title="Edit" th:data-id="${j.id}"th:data-nama="${j.nama}">
+                                                                            href="#update" data-toggle="modal" data-placement="top" title="Edit" th:data-id="${j.id}"th:data-nama="${j.nama}"th:data-fakultas="${j.fakultas}">
                                                                         <i class="fa fa-pencil"></i>
 
                                                                     </button>
@@ -286,15 +286,17 @@
         <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
         <!-- Custom Theme Scripts -->
-        <script src="../build/js/custom.min.js"></script>
+        <script src=".log./build/js/custom.min.js"></script>
 
 
         <script>
             $(document).on("click", ".open-update", function () {
             var ids = $(this).data('id');
             var namas = $(this).data('nama');
+            var fakultass = $(this).data('fakultas');
             $(".modal-body #textId").val( ids );
             $(".modal-body #textName").val( namas );
+            $(".modal-body #textFakultas").val( fakultass );
             $('#exampleModal1').modal('show');
             });
         </script>
@@ -309,6 +311,27 @@
             $('#exampleModal').modal('show');
             });
         </script>
+                <script>
+                function saveswal(){
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Your data has been saved',
+  showConfirmButton: false,
+  timer: 1500
+})}
+                </script>
+                <script>
+               function deleteswal(){
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Your data has been deleted',
+  showConfirmButton: false,
+  timer: 1500
+})}
+                </script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     </body>
 
 </html>

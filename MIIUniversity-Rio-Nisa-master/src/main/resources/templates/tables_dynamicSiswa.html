@@ -45,7 +45,7 @@
                         <div class="profile clearfix"> 
                             <div class="profile_info">
                                 <span>Welcome,</span>
-                                <h2>ADMIN</h2>
+                                <h2>User</h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -63,8 +63,7 @@
                                     </li>
                                     <li><a href="/siswa/user"><i class="fa fa-users"></i> Siswa</a> 
                                     </li> 
-                                    <li><a href="/user"><i class="fa fa-user"></i> Data Pribadi</a> 
-                                    </li> 
+                                    
                                 </ul>
                             </div> 
 
@@ -82,7 +81,7 @@
                             <a data-toggle="tooltip" data-placement="top" title="Lock">
                                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                             </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="/">
                                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                             </a>
                         </div>
@@ -240,7 +239,7 @@
                         <!-- footer content -->
                         <footer>
                             <div class="pull-right">
-                                Rio & Nisa b</a>
+                                Rio & Nisa </a>
                             </div>
                             <div class="clearfix"></div>
                         </footer>
@@ -310,6 +309,27 @@
                     $('#new').modal('show');
                     });
                 </script>
+                        <script>
+                function saveswal(){
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Your data has been saved',
+  showConfirmButton: false,
+  timer: 1500
+})}
+                </script>
+                <script>
+               function deleteswal(){
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Your data has been deleted',
+  showConfirmButton: false,
+  timer: 1500
+})}
+                </script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
                 </body>
 
                 </html>
